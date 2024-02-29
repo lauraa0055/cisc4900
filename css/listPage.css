@@ -1,0 +1,22 @@
+#recipe-list{
+	margin: auto;
+}
+
+.card{
+	margin-left: 20px;
+	margin: auto;
+}
+
+.card:hover{
+	background-color: pink;
+	color: white;
+}
+
+
+
+.btn{
+	width: 90%;
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+}
+

@@ -1,0 +1,63 @@
+/*
+ *This page will have all the styling for the recipe page
+
+1 rem = 16 px
+
+variables in css: 
+:root{
+	--var_name: value
+} 
+
+to use the variable: 
+var(--val_name)
+
+ * */
+
+:root{
+	--body_left_margin: 1.5rem;
+	--buttons_bottom_margin: 1.5rem;
+	--buttons_top_margin: 1.6rem;
+	--instructions_top_margin: 1.6rem;
+}
+
+#nav-buttons{
+	width: 50%;
+}
+
+button{
+	width: 50%;
+}
+
+body{
+	margin-left: var(--body_left_margin);
+}
+
+
+#recipe-instructions{
+	margin-top: var(--instructions_top_margin);
+}
+
+
+
+/*medium devices: landscape tablets, etc. and up*/
+@media only screen and (min-width: 768px){
+	:root{
+		--body_left_margin: 10px;
+	}
+}
+
+
+/*large devices: laptops/desktops, etc. and up*/
+@media only screen and (min-width: 992px){
+	:root{
+			--body_left_margin: 10px;
+	}
+}
+
+
+/*extra large devices: large laptops and desktops*/
+@media only screen and (min-width: 1200px){
+
+
+}
+

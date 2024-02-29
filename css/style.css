@@ -1,0 +1,57 @@
+/*
+ *This page will have all the styling for the index page
+
+1 rem = 16 px
+
+variables in css: 
+:root{
+	--var_name: value
+} 
+
+to use the variable: 
+var(--val_name)
+
+ * */
+
+:root{
+	--nav_buttons_bottom_margin: 1rem;
+	--search_max_width: 40rem;
+}
+
+h1{
+	text-align: center;
+}
+
+body{
+	text-align: center;
+}
+
+#nav-buttons{
+	margin-bottom: var(--nav_buttons_bottom_margin);
+}
+
+#search{
+	max-width: var(--search_max_width);
+	margin: auto;
+}
+
+/*medium devices: landscape tablets, etc. and up*/
+@media only screen and (min-width: 768px){
+	:root{
+	}
+}
+
+
+/*large devices: laptops/desktops, etc. and up*/
+@media only screen and (min-width: 992px){
+	:root{
+	}
+}
+
+
+/*extra large devices: large laptops and desktops*/
+@media only screen and (min-width: 1200px){
+
+
+}
+
