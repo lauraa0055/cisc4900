@@ -22,7 +22,10 @@ var(--val_name)
 
 #nav-buttons{
 	width: 50%;
+	margin-top: var(--buttons_top_margin);
+	margin-bottom: var(--buttons_bottom_margin);
 }
+
 
 button{
 	width: 50%;
