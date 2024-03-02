@@ -15,3 +15,9 @@ function tutorialButton(){
 	location.replace("./tutorialPage.html");
 
 }
+
+function recipeListButton(){
+
+	location.replace("./recipeIndex.html");
+
+}
