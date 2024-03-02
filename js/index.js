@@ -6,6 +6,12 @@
 
 function search(){
 
-location.replace("./listPage.html");
+    location.replace("./listPage.html");
+
+}
+
+function tutorialButton(){
+
+	location.replace("./tutorialPage.html");
 
 }
