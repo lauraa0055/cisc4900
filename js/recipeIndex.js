@@ -1,11 +1,9 @@
 function homeButton(){
 
-	location.replace("./index.html");
-
+	window.location.href = "./index.html";
 }
 
 function recipePage(){
-
-	location.replace("./recipePage.html");
+	window.location.href = "./recipePage.html";
 
 }
