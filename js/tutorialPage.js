@@ -1,5 +1,5 @@
 function homeButton(){
 
-	location.replace("./index.html");
+	window.location.href = "./index.html";
 
 }

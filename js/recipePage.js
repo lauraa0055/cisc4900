@@ -1,7 +1,9 @@
+
 function homeButton(){
-	location.replace("./index.html");
+	window.location.href = "./index.html";
 }
 
 function backButton(){
-	location.replace("./listPage.html");
+	history.back();
 }
+
