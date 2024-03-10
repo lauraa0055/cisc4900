@@ -10,6 +10,12 @@ function search(){
 
 }
 
+function logoButton(){
+
+	location.replace("./logoPage.html");
+
+}
+
 function tutorialButton(){
 
 	location.replace("./tutorialPage.html");
