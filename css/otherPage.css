@@ -1,0 +1,82 @@
+/*
+ variables in css: 
+:root{
+	--var_name: value
+} 
+
+to use the variable: 
+var(--val_name)
+
+
+ * */
+
+:root{
+	--laptop-content-left-margin: 2rem;
+	--laptop-content-right-margin: 2rem;
+	--laptop-content-top-margin: 3rem;
+	---arrow-align-margin: 1rem;
+	---row-class-bottom-margin: 1rem;
+	---convert-submit-buttom-padding: .5rem;
+	---ul-maring-left-and-right: 1rem;
+}
+
+.row{
+	margin-bottom: var(---row-class-bottom-margin);
+}
+
+#content{
+	margin-top: var(--laptop-content-top-margin);
+	margin-left: var(--laptop-content-left-margin);
+	margin-right: var(--laptop-content-right-margin);
+}
+
+#timer-container{
+	background-color: #FFC0CB;
+	padding-left: 0rem;
+	padding-right: 0rem;
+	padding-bottom: 1rem;
+	margin-left: 1rem;
+}
+
+#conversion-container{
+	background-color: #95DED6;
+	padding: 2rem;
+}
+
+#navigation{
+	margin-top: 1rem;
+}
+
+#add-button{
+	width: 100%;
+	display: block;
+	padding: .2rem;
+	font-size: 1.5rem;
+}
+
+#convert-measurement-button{
+	padding: var(---convert-submit-buttom-padding);
+}
+
+
+#input-convert{
+	margin-top: var(---arrow-align-margin);
+}
+
+#output-convert{
+	margin-top: var(---arrow-align-margin);
+}
+
+#arrow{
+	font-size: 3rem;
+}
+
+p{
+	font-size: 1.6rem;
+}
+
+ul{
+	margin-top: var(---ul-maring-left-and-right);
+	margin-right: var(---ul-maring-left-and-right);
+	margin-left: var(---ul-maring-left-and-right);
+}

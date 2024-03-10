@@ -21,3 +21,7 @@ function recipeListButton(){
 	location.replace("./recipeIndex.html");
 
 }
+
+function otherPageButton(){
+	window.location.href = "./other.html";
+}
