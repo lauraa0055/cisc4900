@@ -61,6 +61,7 @@ function calculations(input, conversion_type){
 	- create row div: class = row g-2
 	- create inner col 1: header 3: Timer Title
 	- create inner col 2: class = " col-auto" -> button to exit
+		- type="button" class="btn-close" aria-label="Close"
 	- p: timer
 */
 
@@ -77,15 +78,51 @@ function addTimer(){
 	var hour_input = document.getElementById('hours').value;
 	var minute_input = document.getElementById('minutes').value;
 	var second_input = document.getElementById('seconds').value;
-
-	var display = document.getElementById('test');
-
-	startTimer(display, hour_input, minute_input, second_input);
 	
 	//name
 	var name_of_timer_input = document.getElementById('timer_name').value;
-	var change_name_of_timer = document.getElementById('timer_title');
-	change_name_of_timer.innerHTML = name_of_timer_input;
+	let list = document.getElementById('timer-group');
+
+	let make_list_item = document.createElement("li");
+	make_list_item.setAttribute("class", "list-group-item");
+
+	let make_row = document.createElement("div");
+	make_row.setAttribute("class", "row g-2");
+
+	let header_div = document.createElement("div");
+	header_div.setAttribute("class", "col");
+
+	let header_text = document.createElement("h3");
+	header_text.innerText = name_of_timer_input; 
+
+	header_div.appendChild(header_text);
+
+	let exit_button_div = document.createElement("div");
+	exit_button_div.setAttribute("class", "col-auto");
+
+	let exit_button = document.createElement("button");
+	exit_button.setAttribute("class", "btn-close");
+	exit_button.setAttribute("aria-label", "Close");
+
+
+	let timer_paragraph = document.createElement('p');
+
+	exit_button_div.appendChild(exit_button);
+
+	make_row.appendChild(header_div);
+	make_row.appendChild(exit_button_div);
+	make_row.appendChild(timer_paragraph);
+
+	make_list_item.appendChild(make_row);
+
+	list.appendChild(make_list_item);
+	
+	startTimer(timer_paragraph, hour_input, minute_input, second_input);
+
+	exit_button.onclick = function(){
+		(((this.parentElement).parentElement).parentElement).remove();
+	}
+	
 }
 
 // time in hours = time in minutes / 60 = time in seconds / 3600
