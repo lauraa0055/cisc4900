@@ -74,10 +74,13 @@ const ONE_HOUR = ONE_MIN * 60;
 var SECONDS_WANTED;
 var HOURS_WANTED;
 function addTimer(){
+	var hour_input = document.getElementById('hours').value;
 	var minute_input = document.getElementById('minutes').value;
-	var minute_output = ONE_MIN * minute_input;
+	var second_input = document.getElementById('seconds').value;
+
 	var display = document.getElementById('test');
-	startTimer(minute_output, display);
+
+	startTimer(display, hour_input, minute_input, second_input);
 	
 	//name
 	var name_of_timer_input = document.getElementById('timer_name').value;
@@ -85,21 +88,34 @@ function addTimer(){
 	change_name_of_timer.innerHTML = name_of_timer_input;
 }
 
+// time in hours = time in minutes / 60 = time in seconds / 3600
+
 const SECOND_IN_MILISECOND = 1000;
-function startTimer(duration, display) {
-	var timer = duration, minutes, seconds;
-	setInterval(function () {
-		minutes = parseInt(timer / 60, 10);
-		seconds = parseInt(timer % 60, 10);
+function startTimer(display, num_hours, num_minutes, num_seconds) {
+		setInterval(function () {
 
-		minutes = minutes < 10 ? "0" + minutes : minutes;
-		seconds = seconds < 10 ? "0" + seconds : seconds;
+		num_seconds--;
 
-		display.innerText = minutes + ":" + seconds;
-
-		if (--timer < 0) {
-			timer = duration;
+		if(num_seconds == -1){
+			if(num_minutes > 0){
+				num_minutes--;
+				num_seconds = 59;
+				num_minutes = num_minutes < 10 ? "0" + num_minutes : num_minutes;
+			} else if(num_hours > 0){
+				num_hours--;
+				num_minutes = 59;
+				num_seconds = 59;
+			}else{
+				num_seconds = 0;
+				clearInterval(this);
+			}
 		}
+
+
+		num_seconds = num_seconds < 10 ? "0" + num_seconds : num_seconds;
+
+		display.innerText = num_hours + ":" + num_minutes + ":" + num_seconds;
+		
 	}, SECOND_IN_MILISECOND);
 }
 
