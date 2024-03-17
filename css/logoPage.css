@@ -14,11 +14,78 @@
     max-width: 30%;
     max-height: 30%;
     margin-left: 5rem;
+    float: left;
+    
 	
   }
 
 .description {
     font-size: 20px;
-    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 5rem;
+    float: right;
+   
     
 }
+
+@media only screen and (max-width: 1024px) { 
+  .description h1 {	 
+    font-size: 40px; 
+  } 
+  .description p {	 
+    font-size: 22px; 
+  } 
+}
+
+@media only screen and (max-width: 768px) { 
+  .logo{
+    max-width: 40%;
+    max-height: 40%;
+    margin-left:4rem;
+
+  }
+  .description h1 {	 
+    font-size: 40px; 
+  } 
+  .description p {	 
+    font-size: 20px; 
+  } 
+}
+
+@media only screen and (max-width: 600px) { 
+  .logo{
+    max-width: 45%;
+    max-height: 45%;
+    margin-left:3rem;
+  }
+  .description h1 {	 
+    font-size: 40px; 
+  } 
+  .description p {	 
+    font-size: 20px; 
+  } 
+}
+
+@media (orientation: portrait) and (max-width: 600px) { 
+  .description-container {
+    align-items: center;
+    flex-direction: column;
+    flex-wrap:wrap;
+    
+  }
+  .logo { 
+    max-width: 100%;
+    max-height: 100%;  
+    margin-left:0rem;
+    flex: 0 0 100%
+
+  } 
+  .description { 
+    margin-left: 5rem;
+    flex: 0 0 100%
+  }
+  
+}
+  
+  
+
