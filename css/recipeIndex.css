@@ -13,10 +13,45 @@
 }
 
 
-
 .btn{
 	width: 90%;
 	margin-top: 1rem;
 	margin-bottom: 3rem;
 }
 
+.card {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	margin-left: 55px;
+	margin-right:;
+}
+  
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media only screen and (max-width: 1024px) { 
+	.card{
+		width:49%;
+		margin-left:6px;
+	}
+	
+}
+  
+@media only screen and (max-width: 768px) { 
+	.card {
+		width:48%;
+		margin-left:10px;
+	}
+	
+}
+
+@media screen and (max-width: 600px) {
+	.card {
+		width: 100%;
+		margin-left:0px;
+	}
+}
