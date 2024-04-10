@@ -26,6 +26,19 @@ body{
 	text-align: center;
 }
 
+.btn
+{
+	border-color:rgb(186, 131, 30);
+	color:rgb(186, 131, 30);
+}
+
+.btn:hover
+{
+	background-color:rgb(186, 131, 30);
+	border-color:rgb(186, 131, 30);
+	color:white ;
+}
+
 #nav-buttons{
 	margin-bottom: var(--nav_buttons_bottom_margin);
 }
