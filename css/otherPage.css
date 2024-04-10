@@ -80,3 +80,71 @@ ul{
 	margin-right: var(---ul-maring-left-and-right);
 	margin-left: var(---ul-maring-left-and-right);
 }
+
+@media (min-width: 992px) {
+    #navigation .btn {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+
+    #conversion-container {
+        margin-bottom: 40px;
+    }
+
+    .modal-title {
+        font-size: 2rem;
+    }
+
+    #newTimer .form-control {
+        font-size: 18px;
+        padding: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #navigation .btn {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    #conversion-container {
+        margin-bottom: 30px;
+    }
+
+    .modal-title {
+        font-size: 1.7rem;
+    }
+
+    #newTimer .form-control {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+  
+  @media only screen and (max-width: 768px) {
+    #navigation .btn {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    #conversion-container {
+        margin-bottom: 20px;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    #newTimer .form-control {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+  
+  @media only screen and (max-width: 600px) { 
+	
+  }
+  
+  @media (orientation: portrait) and (max-width: 600px) { 
+	
+  }
