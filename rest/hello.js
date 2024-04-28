@@ -18,6 +18,10 @@ app.get('/', function(req, res) {
 	//res.sendFile(path.join(__dirname, '../css/style.css'))
 });
 
+app.get('/user', function(req, res){
+	res.json({title :'hello world'});
+});
+
 
 app.listen(port, function () {
   console.log(`Example app listening on port ${port}!`);

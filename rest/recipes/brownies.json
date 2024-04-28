@@ -1,7 +1,8 @@
 {
-	"brownie recipe":{
-		"title":	"Brownie",
-		"type":		"sweets",
+	"brownieRecipe":{
+		"title":"Brownie",
+		"author":"Sammy", 
+		"type":	"sweets",
 		"health index": 5,
 		"ingredients": [
 			"chocolate",

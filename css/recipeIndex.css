@@ -26,6 +26,10 @@
 	margin-left: 55px;
 	margin-right:;
 }
+
+h1{
+	font-weight: bold;
+}
   
 .row:after {
 	content: "";
