@@ -5,5 +5,4 @@ function homeButton(){
 
 function recipePage(){
 	window.location.href = "./recipePage.html";
-
 }
