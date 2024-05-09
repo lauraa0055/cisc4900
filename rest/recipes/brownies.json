@@ -1,5 +1,4 @@
 {
-	"brownieRecipe":{
 		"title":"Brownie",
 		"author":"Sammy", 
 		"type":	"sweets",
@@ -10,5 +9,4 @@
 			"eggs",
 			"milk"
 		]
-	}
 }
