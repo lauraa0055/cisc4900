@@ -35,6 +35,12 @@ body{
 	margin: auto;
 }
 
+@media screen and (max-width: 600px) {
+	.input-group{
+		width:80%;
+	}
+}
+
 /*medium devices: landscape tablets, etc. and up*/
 @media only screen and (min-width: 768px){
 	:root{

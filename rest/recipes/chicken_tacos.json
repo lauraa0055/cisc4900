@@ -1,0 +1,14 @@
+{
+		"title":"Chicken Tacos",
+		"author":"Elizabeth", 
+		"type":	"lunch",
+		"health index": 6,
+		"ingredients": [
+			"tortillas",
+			"chicken",
+			"onion",
+			"cilantro",
+			"salt",
+			"tomatoes"
+		]
+}

@@ -10,6 +10,12 @@ function search(){
 
 }
 
+function logoButton(){
+
+	location.replace("./logoPage.html");
+
+}
+
 function tutorialButton(){
 
 	location.replace("./tutorialPage.html");
@@ -20,4 +26,8 @@ function recipeListButton(){
 
 	location.replace("./recipeIndex.html");
 
+}
+
+function otherPageButton(){
+	window.location.href = "./other.html";
 }

@@ -1,0 +1,12 @@
+{
+		"title":"Pancakes",
+		"author":"Jaszmyn", 
+		"type":	"sweets",
+		"health index": 4,
+		"ingredients": [
+			"oil",
+			"all purpose flour",
+			"eggs",
+			"milk"
+		]
+}
