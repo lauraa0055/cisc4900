@@ -72,7 +72,7 @@ for(let i = 0;  i < recipe_list_links.length; i++){
 						let add_measurement = measurementsElement;
 
 						var make_measurement_list = document.createElement('li'); 
-						make_measurement_list.innerHTML = json.ingredients[putMeasurements];
+						make_measurement_list.innerHTML = json.measurements[putMeasurements];
 						
 						add_measurement.appendChild(make_measurement_list);
 
