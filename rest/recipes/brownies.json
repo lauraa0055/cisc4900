@@ -1,19 +1,19 @@
 {
-		"title":"Brownie",
-		"author":"Sammy", 
-		"type":	"sweets",
-		"health index": 5,
-		"ingredients": [
-			"chocolate",
-			"all purpose flour",
-			"eggs",
-			"milk"
-		], 
-		"measurements": [
-			"tbsp chocolate",
-			"4 cups of all purpose flour",
-			"3 eggs",
-			"4 cups of milk"
-		],
-		"instructions": "1. add flour into a bowl\n2. add eggs into another bown and mix until properly scrambled\n3. add milk to the flour\n4. mix flour and milk until no clumps are visible\n5. add eggs and mix well\n6. melt the chocolate over medium heat\n7. add chocolate to flour and mix well\n8. get a 4x4 pan and add the mixture into it\9. put pan in oven for 30 mins and wait"
+  "title": "Brownie",
+  "author": "Sammy",
+  "type": "sweets",
+  "health index": 5,
+  "ingredients": [
+    "chocolate",
+    "all purpose flour",
+    "eggs",
+    "milk"
+  ],
+  "measurements": [
+    "5 tbsp chocolate",
+    "4 cups of all purpose flour",
+    "3 eggs",
+    "4 cups of milk"
+  ],
+  "instructions": "1. add flour into a bowl\n2. add eggs into another bown and mix until properly scrambled\n 3. add milk to the flour\n4. mix flour and milk until no clumps are visible\n 5. add eggs and mix well\n6. melt the chocolate over medium heat\n7. add chocolate to flour and mix well\n8. get a 4x4 pan and add the mixture into it\n9. put pan in oven for 30 mins and wait"
 }
