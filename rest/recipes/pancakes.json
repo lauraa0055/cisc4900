@@ -8,5 +8,12 @@
 			"all purpose flour",
 			"eggs",
 			"milk"
-		]
+		],
+		"measurements": [
+			"1/2 tsp oil",
+			"3 cups of all purpose flour",
+			"3 eggs",
+			"3 cups of milk"
+		],
+		"instructions": "1. add the flour in a bowl.\n2. crack the eggs and put them in the all purpose flour\n3. add milk\n4. add oil\n5. mix until no clumps are seen"
 }

@@ -10,5 +10,14 @@
 			"cilantro",
 			"salt",
 			"tomatoes"
-		]
+		],
+		"measurements": [
+			"3 tortillas",
+			"2 chicken breasts",
+			"1tbp onion",
+			"1tbp cilantro",
+			"2 teaspoons of salt",
+			"1 tomato"
+		],
+		"instructions": "1. dice chicken breast\n2. dice onion\n 3. dice cilantro\n4. dice tomato\n 5. add salt to the chicken\n6. fry the chicken for 5 minutes\n7. heat up tortillas\n8. once chicken is cooked and tortillas are heated, add chicken into the tortillas with cilantro, onion, and tomato"
 }
