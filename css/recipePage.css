@@ -26,6 +26,21 @@ var(--val_name)
 	margin-bottom: var(--buttons_bottom_margin);
 }
 
+.btn{
+
+	font-size: 1.3rem;
+	background-color: rgb(235, 166, 87);
+	border-color:rgb(186, 131, 30);
+	color:rgb(255, 255, 255);
+   
+}
+  
+.btn:hover{
+  
+	background-color:rgb(186, 131, 30);
+	border-color:rgb(186, 131, 30);
+	
+}
 
 button{
 	width: 50%;
@@ -33,11 +48,19 @@ button{
 
 body{
 	margin-left: var(--body_left_margin);
+	font-family: 'Architects Daughter';
+	
 }
 
 
 #recipe-instructions{
 	margin-top: var(--instructions_top_margin);
+	font-size: 1.5rem;
+}
+
+#ingredients-and-measurements {
+
+	font-size: 1.5rem;
 }
 
 .column{
