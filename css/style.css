@@ -27,7 +27,20 @@ body {
 h1{
 	text-align: center;
 	font-size: 5rem;
+	margin-right: 20rem; 
+	padding-right: 15px;
+	
+   
 }
+
+
+.logo {
+    max-width: 15%;
+    max-height: 15%;
+	float:left;
+	margin-left: 25rem;    
+	
+  }
 
 
 .btn
@@ -47,9 +60,12 @@ h1{
 .container-fluid{
 
 	position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+	text-align: center; 
+	display: flex; 
+	align-items: center;
 
 }
 
@@ -57,7 +73,7 @@ h1{
 
 	width:auto;
 	position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 	
@@ -66,7 +82,7 @@ h1{
 .input-group {
 
 	position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 	
