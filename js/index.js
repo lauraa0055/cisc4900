@@ -11,7 +11,7 @@ function search(){
 }
 
 function logoButton(){
-	window.location.href = "./logoPage.html";
+	window.location.href = "./aboutPage.html";
 }
 
 function tutorialButton(){
