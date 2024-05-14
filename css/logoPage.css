@@ -1,7 +1,23 @@
+body {
+	font-family: 'Architects Daughter';
+}
+
 .btn{
 	width: 90%;
 	margin-top: 1rem;
 	margin-bottom: 3rem;
+  font-size: 1.3rem;
+  background-color: rgb(235, 166, 87);
+  border-color:rgb(186, 131, 30);
+	color:rgb(255, 255, 255);
+ 
+}
+
+.btn:hover{
+
+  background-color:rgb(186, 131, 30);
+  border-color:rgb(186, 131, 30);
+  
 }
 
 .description-container {
@@ -14,6 +30,7 @@
     max-width: 30%;
     max-height: 30%;
     margin-left: 5rem;
+    margin-right: 2rem;
     float: left;
     
 	
