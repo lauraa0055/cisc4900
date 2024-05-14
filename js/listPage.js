@@ -8,6 +8,7 @@ function recipePage(){
 }
 
 window.onload = getInput();
+
 var recipe_index;
 function getInput(){
 	recipe_index = ['../rest/recipes/brownies.json', '../rest/recipes/chicken_tacos.json', '../rest/recipes/pancakes.json'];
@@ -24,134 +25,136 @@ function getInput(){
 	}
 }
 
-
 parent = document.getElementsByClassName('card border-dark mb-3');
 
-var parent_index = 0;
-function loadRecipesWithIngredients(recipe_ingredients){
-	let found_recipe = false;
 
-	for(let i = 0; i < recipe_index.length; i++){
-		fetch(recipe_index[i])
-		.then((response) => response.json())
-		.then((json) => {
-			console.log(json);
-			console.log(recipe_ingredients);
-			let count  = 0;
-			for(let j = 0; j < recipe_ingredients.length; j++){
-				for(let k = 0; k < json.ingredients.length; k++){
-					if(recipe_ingredients[j].toLowerCase() === json.ingredients[k].toLowerCase() ||
-					recipe_ingredients[j].includes(json.ingredients[k].toLowerCase()) ||
-					json.ingredients[k].toLowerCase().includes(recipe_ingredients[j])){
-						found_recipe = true;
-						count++;
+var parent_index = 0;
+function loadRecipesWithIngredients(recipe_ingredients){	
+
+		const promises = recipe_index.map(url =>
+			fetch(url)
+			.then((response) => response.json())
+			.then((json) => {
+				console.log(json);
+				console.log(recipe_ingredients);
+				let count  = 0;
+				for(let j = 0; j < recipe_ingredients.length; j++){
+					for(let k = 0; k < json.ingredients.length; k++){
+						if(recipe_ingredients[j].toLowerCase() === json.ingredients[k].toLowerCase() ||
+						recipe_ingredients[j].includes(json.ingredients[k].toLowerCase()) ||
+						json.ingredients[k].toLowerCase().includes(recipe_ingredients[j])){
+							count++;
+						}
 					}
 				}
-			}
-			if(count > 0){
-				console.log(count);
-				if(parent_index == 0){
-				var title = parent[parent_index].children[0];
-					title = title.children[0];
+				if(count > 0){
+					console.log(count);
+					if(parent_index == 0){
+					var title = parent[parent_index].children[0];
+						title = title.children[0];
 
-					var author = parent[parent_index].children[1];
-					author = author.children[0];
+						var author = parent[parent_index].children[1];
+						author = author.children[0];
 
-					var ingredients = [parent[parent_index].children[1].children[3], 
-						parent[parent_index].children[1].children[4], 
-						parent[parent_index].children[1].children[5]];
+						var ingredients = [parent[parent_index].children[1].children[3], 
+							parent[parent_index].children[1].children[4], 
+							parent[parent_index].children[1].children[5]];
 
-					title.innerHTML = json.title;
-					author.innerHTML = json.author;
-					
-					var ingredients_put = 0;
-					for(let j = 0; j < ingredients.length; j++){
-						ingredients[j].innerHTML = json.ingredients[j];
-						ingredients_put++;
-					}
+						title.innerHTML = json.title;
+						author.innerHTML = json.author;
+						
+						var ingredients_put = 0;
+						for(let j = 0; j < ingredients.length; j++){
+							ingredients[j].innerHTML = json.ingredients[j];
+							ingredients_put++;
+						}
 
-					if(ingredients_put < json.ingredients.length){
-						while(ingredients_put < json.ingredients.length){	
-							let add_ingredient = parent[0].children[1];
+						if(ingredients_put < json.ingredients.length){
+							while(ingredients_put < json.ingredients.length){	
+								let add_ingredient = parent[0].children[1];
 
+								var make_ingredient_pill = document.createElement('span'); 
+								make_ingredient_pill.setAttribute("class", "badge rounded-pill text-bg-dark");
+								make_ingredient_pill.innerHTML = json.ingredients[ingredients_put];
+								
+								add_ingredient.appendChild(make_ingredient_pill);
+
+								ingredients_put++;
+							}	
+						
+							parent_index++;
+						}				
+					}else{
+						console.log("more than one");
+
+						var card = document.createElement("div");
+						card.setAttribute("class", "card border-dark mb-3");
+						card.setAttribute("style", "max-width: 36rem;");
+						card.setAttribute("onclick", "pick_recipe(event);");
+
+						var card_header = document.createElement("div");
+						card_header.setAttribute("class", "card-header");
+
+						var title = document.createElement("h1");
+						title.innerHTML = json.title;
+
+						//body
+						var card_body = document.createElement("div");
+						card_body.setAttribute("class", "card-body text-dark");
+
+						var author = document.createElement("h5");
+						author.setAttribute("class", "card-title");
+						author.innerHTML = json.author;
+
+						var ref = document.createElement("a");
+						ref.setAttribute("href", "");
+						ref.innerHTML = "Original Website";
+
+						var br = document.createElement("br");
+
+						card_header.appendChild(title);
+
+						card_body.appendChild(author);
+						card_body.appendChild(ref);
+						card_body.appendChild(br);
+
+
+						for(let z = 0; z < json.ingredients.length; z++){
 							var make_ingredient_pill = document.createElement('span'); 
 							make_ingredient_pill.setAttribute("class", "badge rounded-pill text-bg-dark");
-							make_ingredient_pill.innerHTML = json.ingredients[ingredients_put];
-							
-							add_ingredient.appendChild(make_ingredient_pill);
+							make_ingredient_pill.innerHTML = json.ingredients[z];
+								
+							card_body.appendChild(make_ingredient_pill);
+						}
 
-							ingredients_put++;
-						}	
-					
-						parent_index++;
-					}				
-				}else{
-					console.log("more than one");
+						card.appendChild(card_header);
+						card.appendChild(card_body);
 
-					var card = document.createElement("div");
-					card.setAttribute("class", "card border-dark mb-3");
-					card.setAttribute("style", "max-width: 36rem;");
-					card.setAttribute("onclick", "pick_recipe(event);");
+						var list = document.getElementsByClassName('row-cols-3 row-cols-md-2 g-4');
+						list[0].appendChild(card);
 
-					var card_header = document.createElement("div");
-					card_header.setAttribute("class", "card-header");
-
-					var title = document.createElement("h1");
-					title.innerHTML = json.title;
-
-					//body
-					var card_body = document.createElement("div");
-					card_body.setAttribute("class", "card-body text-dark");
-
-					var author = document.createElement("h5");
-					author.setAttribute("class", "card-title");
-					author.innerHTML = json.author;
-
-					var ref = document.createElement("a");
-					ref.setAttribute("href", "");
-					ref.innerHTML = "Original Website";
-
-					var br = document.createElement("br");
-
-					card_header.appendChild(title);
-
-					card_body.appendChild(author);
-					card_body.appendChild(ref);
-					card_body.appendChild(br);
-
-
-					for(let z = 0; z < json.ingredients.length; z++){
-						var make_ingredient_pill = document.createElement('span'); 
-						make_ingredient_pill.setAttribute("class", "badge rounded-pill text-bg-dark");
-						make_ingredient_pill.innerHTML = json.ingredients[z];
-							
-						card_body.appendChild(make_ingredient_pill);
 					}
-
-					card.appendChild(card_header);
-					card.appendChild(card_body);
-
-					var list = document.getElementsByClassName('row-cols-3 row-cols-md-2 g-4');
-					list[0].appendChild(card);
-
 				}
-			}
+			})
+		);
+
+		Promise.all(promises)
+        .then(() => {
+            if(parent[0].children[0].children[0].innerHTML === "Recipe Title") {
+                var list = document.getElementsByClassName('row');
+				list[0].remove();
+
+				var sorry = document.createElement("h1");
+				sorry.setAttribute("style", "text-align: center;");
+				sorry.innerHTML = "Apologies as we do not have any results with your search keyword in our database";
+
+				document.body.appendChild(sorry);
+
+            }
+			})
+			.catch(error => {
+				console.error("Error fetching recipes:", error);
 		});
-
-	}
-
-	if(!found_recipe){
-		var list = document.getElementsByClassName('row');
-		list[0].remove();
-
-		var sorry = document.createElement("h1");
-		sorry.setAttribute("style", "text-align: center;");
-		sorry.innerHTML = "Apologies as there does not seem to be a result of your search in our database";
-
-		document.body.appendChild(sorry);
-
-	}
-
 }
 
 function loadRecipesWithName(recipe_name){
