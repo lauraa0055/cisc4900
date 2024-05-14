@@ -1,5 +1,5 @@
 function backButton(){
-	history.back();	
+	window.location.href = "./index.html";
 }
 
 function recipeIndexButton(){
