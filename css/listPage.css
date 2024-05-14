@@ -20,6 +20,10 @@
 	margin-bottom: 3rem;
 }
 
+h1{
+	font-weight: bold;
+}
+
 .card {
 	float: left;
 	width: 50%;

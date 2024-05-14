@@ -27,6 +27,10 @@ authorElement = authorElement.children[0];
 
 var ingredientsElement = getElement("ingredients");
 
+var measurementsElement = getElement("measurements");
+
+var instructions = getElement("instructions");
+
 var loaded_recipe = false;
 for(let i = 0;  i < recipe_list_links.length; i++){
 	if(!loaded_recipe){
@@ -57,7 +61,27 @@ for(let i = 0;  i < recipe_list_links.length; i++){
 					}	
 				}
 
+				var putMeasurements = 0;
+				for(let x = 0; x < 4; x++){
+					measurementsElement.children[x].innerText = json.measurements[x];
+					putMeasurements++;
+				}
 
+				if(putMeasurements < json.measurements.length){
+					while(putMeasurements < json.measurements.length){	
+						let add_measurement = measurementsElement;
+
+						var make_measurement_list = document.createElement('li'); 
+						make_measurement_list.innerHTML = json.measurements[putMeasurements];
+						
+						add_measurement.appendChild(make_measurement_list);
+
+						putMeasurements++;
+					}	
+				}
+
+				instructions.innerText = json.instructions;
+				
 				loaded_recipe = true;
 			}
 		});
