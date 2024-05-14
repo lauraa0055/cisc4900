@@ -2,13 +2,18 @@
 	margin: auto;
 }
 
+body {
+	font-family: 'Architects Daughter';
+}
+
 .card{
 	margin-left: 20px;
 	margin: auto;
 }
 
 .card:hover{
-	background-color: pink;
+	background-color: rgba(255, 219, 147, 0.869);
+	/*background-color: rgba(255, 159, 147, 0.869);*/
 	color: white;
 }
 
@@ -17,6 +22,17 @@
 	width: 90%;
 	margin-top: 1rem;
 	margin-bottom: 3rem;
+	font-size: 1.3rem;
+	background-color: rgb(235, 166, 87);
+  	border-color:rgb(186, 131, 30);
+	color:rgb(255, 255, 255);
+}
+
+.btn:hover
+{
+	background-color:rgb(186, 131, 30);
+	border-color:rgb(186, 131, 30);
+	color:white ;
 }
 
 .card {
@@ -28,6 +44,7 @@
 
 h1{
 	font-weight: bold;
+	margin-left: 75px;
 }
   
 .row:after {
@@ -35,26 +52,45 @@ h1{
 	display: table;
 	clear: both;
 }
-
-@media only screen and (max-width: 1024px) { 
+@media only screen and (min-width: 1281px){ 
 	.card{
-		width:49%;
-		margin-left:6px;
+		width:39%;
+		margin-left:6rem;
+	}
+	
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px){ 
+	.card{
+		width:38%;
+		margin-left:5.5rem;
 	}
 	
 }
   
-@media only screen and (max-width: 768px) { 
+@media only screen and (min-width: 769px) and (max-width: 1023px) { 
 	.card {
-		width:48%;
-		margin-left:10px;
+		width:40%;
+		margin-left:4.5rem;
+		margin-right: -2.5rem;
 	}
 	
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width:600px) and (max-width: 768px) {
+	.card {
+		width: 80%;
+		margin-left:4rem;
+
+		
+	}
+}
+
+@media screen and (max-width:599px){
 	.card {
 		width: 100%;
-		margin-left:0px;
+		margin-left:0rem;
+
+		
 	}
 }

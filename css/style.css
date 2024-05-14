@@ -18,16 +18,99 @@ var(--val_name)
 	--search_max_width: 40rem;
 }
 
-h1{
+
+body {
+	font-family: 'Architects Daughter';
 	text-align: center;
 }
 
-body{
+h1{
 	text-align: center;
+	font-size: 5rem;
+	margin-right: 20rem; 
+	padding-right: 15px;
+	
+   
+}
+
+
+.logo {
+    max-width: 15%;
+    max-height: 15%;
+	float:left;
+	margin-left: 25rem;    
+	
+  }
+
+
+.btn
+{
+	border-color:rgb(186, 131, 30);
+	color:rgb(186, 131, 30);
+	font-size: 1.5rem;
+}
+
+.btn:hover
+{
+	background-color:rgb(186, 131, 30);
+	border-color:rgb(186, 131, 30);
+	color:white ;
+}
+
+.container-fluid{
+
+	position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	text-align: center; 
+	display: flex; 
+	align-items: center;
+
+}
+
+.btn-group{
+
+	width:auto;
+	position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	
+}
+
+.input-group {
+
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	
+
+}
+
+.form-control::placeholder{
+
+	font-size:1.2rem;
+}
+
+#search button{
+
+	background-color: rgb(235, 166, 87);
+	color: white;
+	
+}
+
+#search button:hover
+{
+	background-color:rgb(186, 131, 30);
+	border-color:rgb(186, 131, 30);
+	color:white ;
 }
 
 #nav-buttons{
 	margin-bottom: var(--nav_buttons_bottom_margin);
+	
 }
 
 #search{
@@ -35,29 +118,48 @@ body{
 	margin: auto;
 }
 
-@media screen and (max-width: 600px) {
-	.input-group{
-		width:80%;
-	}
+@media screen and (min-width: 1024px){
+
+	
+	
 }
 
 /*medium devices: landscape tablets, etc. and up*/
-@media only screen and (min-width: 768px){
-	:root{
-	}
-}
+@media only screen and (min-width: 769px) and (max-width:1023px){
 
+	.btn{
+
+		font-size: 1.7rem;
+	}
+	.form-control::placeholder{
+
+		font-size:1.5rem;
+	}
+	
+}
 
 /*large devices: laptops/desktops, etc. and up*/
-@media only screen and (min-width: 992px){
-	:root{
+@media only screen and (min-width: 600px) and (max-width:768px){
+
+	.btn{
+
+		font-size: 1.8rem;
+	}
+	.form-control::placeholder{
+
+		font-size:1.6rem;
+	}
+	.input-group{
+		width:80%;
+	}
+	
+}
+
+@media screen and (max-width:599px){
+
+	.input-group{
+		width:90%;
 	}
 }
 
-
-/*extra large devices: large laptops and desktops*/
-@media only screen and (min-width: 1200px){
-
-
-}
 
