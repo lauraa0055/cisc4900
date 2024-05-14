@@ -2,22 +2,36 @@
 	margin: auto;
 }
 
+body {
+	font-family: 'Architects Daughter';
+}
+
 .card{
 	margin-left: 20px;
 	margin: auto;
 }
 
 .card:hover{
-	background-color: pink;
+	background-color: rgba(255, 219, 147, 0.869);
 	color: white;
 }
-
-
 
 .btn{
 	width: 90%;
 	margin-top: 1rem;
 	margin-bottom: 3rem;
+	font-size: 1.3rem;
+	background-color: rgb(235, 166, 87);
+	border-color:rgb(186, 131, 30);
+	color:rgb(255, 255, 255);
+   
+}
+  
+.btn:hover{
+  
+	background-color:rgb(186, 131, 30);
+	border-color:rgb(186, 131, 30);
+	
 }
 
 .card {
