@@ -82,7 +82,7 @@ h1{
 .input-group {
 
 	position: absolute;
-    top: 55%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 	
@@ -129,9 +129,9 @@ h1{
 	}
 
     .logo {
-		max-width: 20%;
-    	max-height: 20%;
-        margin-left: 20rem; 
+		max-width: 15%;
+    	max-height: 15%;
+        margin-left: 23rem; 
         margin-right: 0rem; 
         float: none; 
         display: block; 
@@ -155,10 +155,10 @@ h1{
 	}
 
     .logo {
-		max-width: 25%;
-    	max-height: 25%;
-        margin-left: 12rem; 
-        margin-right: 0rem; 
+		max-width: 15%;
+    	max-height: 15%;
+        margin-left: 15rem; 
+        margin-right: 2rem; 
         float: none; 
         display: block; 
         
@@ -187,10 +187,10 @@ h1{
 	}
 
     .logo {
-		max-width: 30%;
-    	max-height: 30%;
-        margin-left: 5rem; 
-        margin-right: 0rem; 
+		max-width: 18%;
+    	max-height: 18%;
+        margin-left: 8rem; 
+        margin-right: 1rem; 
         float: none; 
         display: block; 
         
@@ -220,8 +220,8 @@ h1{
 	}
 
     .logo {
-		max-width: 35%;
-    	max-height: 35%;
+		max-width: 25%;
+    	max-height: 25%;
         margin-left: 0; 
         margin-right: 0; 
         float: none; 
@@ -254,8 +254,8 @@ h1{
 	}
 
     .logo {
-		max-width: 35%;
-    	max-height: 35%;
+		max-width: 30%;
+    	max-height: 30%;
         margin-left: 0; 
         margin-right: -2rem; 
         float: none; 
