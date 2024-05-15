@@ -11,7 +11,8 @@ window.onload = getInput();
 
 var recipe_index;
 function getInput(){
-	recipe_index = ['../rest/recipes/brownies.json', '../rest/recipes/chicken_tacos.json', '../rest/recipes/pancakes.json'];
+	recipe_index = ['../rest/recipes/brownies.json', '../rest/recipes/chicken_tacos.json', '../rest/recipes/pancakes.json',
+	'../rest/recipes/baked_spaghetti.json', '../rest/recipes/beef_stir_fry.json', '../rest/recipes/swiss_potato_soup.json'];
 
 	const recipe_name = localStorage.getItem("recipe_name");
 
@@ -55,6 +56,12 @@ function loadRecipesWithIngredients(recipe_ingredients){
 
 						var author = parent[parent_index].children[1];
 						author = author.children[0];
+
+						var website = parent[parent_index].children[1].children[1];
+						if(json.website === ""){
+						}else{
+							website.setAttribute("href", json.website);
+						}
 
 						var ingredients = [parent[parent_index].children[1].children[3], 
 							parent[parent_index].children[1].children[4], 

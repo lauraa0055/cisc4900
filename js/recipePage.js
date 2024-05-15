@@ -5,7 +5,8 @@ function getRecipe(gotRecipe){
 	recipe = gotRecipe;
 }
 
-const recipe_list_links = ['../rest/recipes/brownies.json', '../rest/recipes/chicken_tacos.json', '../rest/recipes/pancakes.json'];
+const recipe_list_links = ['../rest/recipes/brownies.json', '../rest/recipes/chicken_tacos.json', '../rest/recipes/pancakes.json',
+ '../rest/recipes/baked_spaghetti.json', '../rest/recipes/beef_stir_fry.json', '../rest/recipes/swiss_potato_soup.json'];
 
 function homeButton(){
 	window.location.href = "./index.html";

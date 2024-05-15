@@ -5,7 +5,8 @@ function getElement(classname){
 
 parent = getElement('card border-dark mb-3');
 
-const json_files = ['../rest/recipes/brownies.json', '../rest/recipes/chicken_tacos.json', '../rest/recipes/pancakes.json'];
+const json_files = ['../rest/recipes/brownies.json', '../rest/recipes/chicken_tacos.json', '../rest/recipes/pancakes.json',
+ '../rest/recipes/baked_spaghetti.json', '../rest/recipes/beef_stir_fry.json', '../rest/recipes/swiss_potato_soup.json'];
 
 var parent_index = 0;
 var child_index = 0;
@@ -25,6 +26,12 @@ fetch(json_files[i])
 		var author = child.children[1];
 		author = author.children[0];
 		author.innerHTML = json.author;
+
+		var website = parent[parent_index].children[1].children[1];
+		if(json.website === ""){
+		}else{
+			website.setAttribute("href", json.website);
+		}
 
 		var ingredients = [child.children[1].children[3], child.children[1].children[4], child.children[1].children[5]];
 
